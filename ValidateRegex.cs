@@ -5,7 +5,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace RegexPattern
+
+ namespace RegexPattern
 {
     public class ValidateRegex
     {
@@ -13,6 +14,12 @@ namespace RegexPattern
         {
             string pattern = "^[a]{1}[b]{2,3}$";
             string[] inputs = { "ab", "abb", "abbb", "abbbb" };
+            ValidatePattern(inputs, pattern);
+        }
+        public static void FindSequencewithUnderscore()
+        {
+            string pattern = "^[a-z]+_[a-z]+$";
+            string[] inputs = { "sne_ha", "sneh_a", "SNe_hA", "S_neha" };
             ValidatePattern(inputs, pattern);
         }
 
